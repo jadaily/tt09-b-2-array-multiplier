@@ -9,11 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Explain how an array multiplier works
+Explain partial products and include pictures
 
 ## How to test
 
-Explain how to use your project
+Explain how you know that your hardware is working when you get it
 
 ## External hardware
 
