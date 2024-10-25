@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um__b_2_array_multiplier (
+module tt_um_b_2_array_multiplier (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -58,9 +58,11 @@ endmodule
 module full_adder (
     input wire a, 
     input wire b,
-    input cin,
-    output sum,
-    output cout
+    input wire cin,
+    output wire sum,
+    output wire cout
 );
-    assign {cout, sum} = a + b + cin;
+    // assign {cout, sum} = a + b + cin;
+    assign sum = a ^ b ^ cin;
+    assign cout = (a & b) | (a & cin) | (b & cin);
 endmodule 
