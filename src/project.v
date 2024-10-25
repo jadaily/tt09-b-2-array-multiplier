@@ -22,8 +22,7 @@ wire [7:0] p;
 
 wire [3:0] pp0, pp1, pp2, pp3;  //partial product between m and  one-bit of q
 wire c1,c2,c3,c4,c5,c6,c7,c8; //wire from product to full adder 
-wire [3:0] s1, s2, s3, s4; //wire between full adders 
-
+wire [3:0] s1, s2; //wire between full adders 
 //assign partial products between m and q 
 assign pp0 = m & {4{q[0]}}; //m & q0 4-bit
 assign pp1 = m & {4{q[1]}}; //m & q1 4-bit
@@ -62,7 +61,6 @@ module full_adder (
     output wire sum,
     output wire cout
 );
-    // assign {cout, sum} = a + b + cin;
     assign sum = a ^ b ^ cin;
     assign cout = (a & b) | (a & cin) | (b & cin);
 endmodule 
