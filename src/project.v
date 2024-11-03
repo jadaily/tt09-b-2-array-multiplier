@@ -16,8 +16,8 @@ module tt_um_b_2_array_multiplier (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-wire [3:0] m = ui_in[3:0];
-wire [3:0] q = ui_in[7:4];
+wire [3:0] m = ui_in[7:4];
+wire [3:0] q = ui_in[3:0];
 wire [7:0] p; 
 
 wire [3:0] pp0, pp1, pp2, pp3;  //partial product between m and  one-bit of q
