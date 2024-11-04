@@ -35,7 +35,7 @@ graph TD;
 
 ## Block diagram PDF
 
-![4x4 Array Multiplier Block Diagram](./docs/blockdiagram.png)
+![4x4 Array Multiplier Block Diagram](https://github.com/jadaily/tt09-b-2-array-multiplier/blob/6dbfd723f7fbafaf46a8fe55e32383bb3bc56d70/docs/blockdiagram.png)
 
 ## How to test
 
