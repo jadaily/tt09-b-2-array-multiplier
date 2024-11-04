@@ -19,12 +19,16 @@ The partial products are then added together using full adders, with carry bits 
 
 ```mermaid
 graph TD;
-    A[Input A (4 bits)] -->|Partial Products| B[Partial Product Creation]
-    D[Input B (4 bits)] -->|Partial Products| B
-    B -->|Partial Products| C[Full Adders]
-    C -->|Product (8 bits)| E[Output Product]
-    F[Control Logic] -->|Control signals| B
-    F -->|Control signals| C
+    A["Input A (4 bits)"] -->|"Partial Products"| B["Partial Product Creation"]
+    D["Input B (4 bits)"] -->|"Partial Products"| B
+    B -->|"Partial Products"| C["Full Adders"]
+    C -->|"Product (8 bits)"| E["Output Product"]
+    F["Control Logic"] -->|"Control signals"| B
+    F -->|"Control signals"| C
+    C -->|"Cout signals"| G["Carry Outputs"]
+    G -->|"Final Carry"| E
+    H["Enable Signal"] -->|"Active High"| I["Output Enable"]
+    I -->|"Enable Control"| E
 ```
 ## How to test
 
