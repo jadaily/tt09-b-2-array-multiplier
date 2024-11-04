@@ -35,7 +35,7 @@ graph TD;
 
 ## Block diagram PDF
 
-
+![4x4 Array Multiplier Block Diagram](./docs/blockdiagram.png)
 
 ## How to test
 
