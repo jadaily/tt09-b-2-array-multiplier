@@ -19,17 +19,24 @@ The partial products are then added together using full adders, with carry bits 
 
 ```mermaid
 graph TD;
-    A["Input A (4 bits)"] -->|"Partial Products"| B["Partial Product Creation"]
-    D["Input B (4 bits)"] -->|"Partial Products"| B
-    B -->|"Partial Products"| C["Full Adders"]
-    C -->|"Product (8 bits)"| E["Output Product"]
-    F["Control Logic"] -->|"Control signals"| B
-    F -->|"Control signals"| C
-    C -->|"Cout signals"| G["Carry Outputs"]
-    G -->|"Final Carry"| E
-    H["Enable Signal"] -->|"Active High"| I["Output Enable"]
-    I -->|"Enable Control"| E
+    M["Input M (4 bits)"] -->|"Partial Products"| PP["Partial Product Creation"]
+    Q["Input Q (4 bits)"] -->|"Partial Products"| PP
+    PP -->|"Partial Products"| FA["Full Adders"]
+    FA -->|"Product (8 bits)"| P["Output Product (p)"]
+    CL["Control Logic"] -->|"Control signals"| PP
+    CL -->|"Control signals"| FA
+    FA -->|"Cout signals"| C["Carry Outputs (c1, c2, c3, c4, c5, c6, c7, c8)"]
+    C -->|"Final Carry"| P
+    E["Enable Signal (ena)"] -->|"Active High"| OE["Output Enable (uio_oe)"]
+    OE -->|"Enable Control"| P
+    U["Unused inputs (ena, clk, rst_n)"] -->|"Handles unused"| W ["Rest of Inputs"]
+    W -->|"Included for completeness"| OE
 ```
+
+## Block diagram PDF
+
+
+
 ## How to test
 
 Explain how you know that your hardware is working when you get it:
