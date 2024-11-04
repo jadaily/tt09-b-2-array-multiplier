@@ -29,7 +29,7 @@ graph TD;
     C -->|"Final Carry"| P
     E["Enable Signal (ena)"] -->|"Active High"| OE["Output Enable (uio_oe)"]
     OE -->|"Enable Control"| P
-    U["Unused inputs (ena, clk, rst_n)"] -->|"Handles unused"| W ["Rest of Inputs"]
+    U["Unused inputs (ena, clk, rst_n)"] -->|"Handles unused"| W["Rest of Inputs"]
     W -->|"Included for completeness"| OE
 ```
 
