@@ -20,13 +20,12 @@ The partial products are then added together using full adders, with carry bits 
 ```mermaid
 graph TD;
     A[Input A (4 bits)] -->|Partial Products| B[Partial Product Creation]
-    A -->|Partial Products| C[Full Adders]
     D[Input B (4 bits)] -->|Partial Products| B
-    B -->|Sum| C
+    B -->|Partial Products| C[Full Adders]
     C -->|Product (8 bits)| E[Output Product]
     F[Control Logic] -->|Control signals| B
     F -->|Control signals| C
-
+```
 ## How to test
 
 Explain how you know that your hardware is working when you get it:
